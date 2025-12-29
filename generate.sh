@@ -1,0 +1,10 @@
+export CUDA_VISIBLE_DEVICES=2
+torchrun --standalone --nproc_per_node=1  generate.py \
+	--sampler_stages=second \
+        --batch=2 \
+        --indir=/home/wuyuhang/code/RefDiff-main/LR/ \
+        --indir_ref=/home/wuyuhang/code/RefDiff-main/Ref/ \
+        --outdir=./results/detection \
+	--seeds=0-63 \
+	--num_steps_second=256 \
+        --network_second="/home/wuyuhang/code/RefDiff-main/experiments/dataset2/00003--uncond-ddpmpp-edm-gpus4-batch4-fp32/training-state-001000.pt"

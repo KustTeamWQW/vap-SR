@@ -1,9 +1,9 @@
 export CUDA_VISIBLE_DEVICES=1,2
 torchrun --standalone --nproc_per_node=2 train.py \
         --outdir=./experiments/dataset2 \
-        --data=/home/wuyuhang/code/VG-DiffSR/datasets/datasets2/train/HR/ \
-        --lr_data=/home/wuyuhang/code/VG-DiffSR/datasets/datasets2/train/LR/  \
-        --ref_data=/home/wuyuhang/code/VG-DiffSR/datasets/datasets2/train/Ref/  \
+        --data=/home/wuyuhang/code/vap-SR/datasets/datasets2/train/HR/ \
+        --lr_data=/home/wuyuhang/code/vap-SR/datasets/datasets2/train/LR/  \
+        --ref_data=/home/wuyuhang/code/vap-SR/datasets/datasets2/train/Ref/  \
         --eff-attn=False \
 		--cond=0 \
 		--batch=2 \
